@@ -587,50 +587,122 @@ span {
   transform: scale(1);
 }
 
-/* .third {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.hover-obj {
-  opacity: 1;
-  transform: scale(1);
-  font-size: 2rem;
-  font-weight: 600;
-  height: 4rem;
-  position: absolute;
-  bottom: 0;
-}
-.hoverMus::before {
-  content: "Music App";
-  font-size: 1rem;
-}
-.hoverEco::before {
-  content: "E-commerce";
-  font-size: 1rem;
-}
-.hoverPalg::before {
-  content: "Polga";
-  font-size: 1rem;
-}
-.hoverNoob::before {
-  content: "Noob-Techies";
-  font-size: 1rem;
-}
-.hoverTodo::before {
-  content: "Todo";
-  font-size: 1rem;
-}
-.hoverMapty::before {
-  content: "Mapty";
-  font-size: 1rem;
-}
-
-.fas:hover,
-.fab:hover {
-  transform: scale(1);
-} */
-
 .to-front {
   position: absolute;
   z-index: 10;
+}
+
+.contactMe {
+  width: 100%;
+}
+.contactMeDiv {
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.contactMeDiv div {
+  text-align: center;
+}
+
+.mobileView {
+  display: none;
+}
+@media screen and (max-width: 890px) {
+  body div {
+    display: none;
+  }
+  body section {
+    display: none;
+  }
+  body footer {
+    display: none;
+  }
+  body {
+    background-image: none;
+    height: 100%;
+    background-color: #0d0a18;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobileView {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .content {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .side-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+  }
+  .me {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1);
+    cursor: pointer;
+    width: 19rem;
+    margin-right: 2%;
+  }
+  .me:hover {
+    -webkit-filter: grayscale(0);
+    filter: none;
+  }
+  .text {
+    color: var(--color-white);
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  span {
+    color: #27ae60;
+  }
+
+  .bounce {
+    margin-top: 3rem;
+    font-size: 1rem;
+    animation: notify 2s infinite ease-in-out;
+  }
+
+  @keyframes notify {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+      text-shadow: 0 3px 15px rgba(255, 255, 255, 0.3);
+      color: #27ae60;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 }
